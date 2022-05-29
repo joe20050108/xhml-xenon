@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Custom ML</title>
+        
+    </head>
+    <body>
+        <div id="processTarget">
+            <StackPanel Tester="crash" Height="32" Testeeeer="crash" Width="32" Testeeewwer="crash" Background="Red" CornerRadius="6">geer</StackPanel>
+            <StackPanel Height="50" Width="50" Background="Green" CornerRadius="25"></StackPanel>
+            <StackPanel Height="100" Width="100" Background="Blue" CornerRadius="2"></StackPanel>
+            <StackPanel Height="100" Width="100" Background="Yellow" CornerRadius="5"></StackPanel>
+            <StackPanel Height="100" Width="100" Background="Black" CornerRadius="10"></StackPanel>
+            <TextBox x:Name="hi" PlaceholderText="test" Height="32" PlaceholdwwewerText="test" PlacehweeweeweoldwwewerText="test" PlaceholdwwqefwergwwewerText="test" Crashweweer="Crashed" ewefeerfgweef="Crashed" Crashweefgwewweweer="Crashed" Width="32" Crasheeeeer="Crashed" Tester="No" Teweewwewester="No" Teswegegedster="No" CornerRadius="20"></TextBox>
+            <TextBox dbg="test" CornerRadius="6" Height="32" Width="100" FontFamily="Segoe UI" FontSize="20"></TextBox>
+            <StackPanel CornerRadius="2" Height="100" Width="200">
+                Demo Textbox
+                <TextBox x:Name="Test" Height="30" Width="100" PlaceholderText="Bold text." FontWeight="bold"></TextBox>
+                <StackPanel Background="Red">
+                    <TextBox Placeholdertext="HIYA~"></TextBox>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel x:Name="coloredPanel" CornerRadius="6" Height="200" Width="200" Background="Green">
+                <StackPanel Height="100" Width="100" Background="Red"></StackPanel>
+                <StackPanel Height="100" Width="100" Background="Blue"></StackPanel>
+            </StackPanel>
+            <TextBlock x:Name="hello" Foreground="red">Hi</TextBlock>
+        </div>
+        <button onclick="xenon.xcompile.controls.processAll()" style="margin-top: 500px;">Turn XAML into HTML.</button>
+    </body>
+    <script>
+        function getTag(e) {
+            return document.getElementsByTagName(e);
+        }
+        function smartCompile() {
+            var StackPanel = getTag("StackPanel")[0];
+            var div = makeElem("div");
+            div.innerHTML = StackPanel.innerHTML;
+            StackPanel.replaceWith(div);
+            CompileButtons();
+        }
+        function CompileButtons() {
+            var NotButton = getTag("NotButton")[0];
+            var Button = makeElem("button");
+            Button.innerHTML = NotButton.innerHTML;
+            NotButton.replaceWith(Button);
+        }
+        function makeElem(elem) {
+            return document.createElement(elem);
+        }
+        //requires-database: StackPanelProperties
+        var StackPanel = {
+            element: "div",
+            Height: {
+                unit:"px",
+                type:"style"
+            },
+        }
+        //probably the earliest iteration of a compiler capable of doing multiple runs
+        function StackPanelCompiler() {
+            var StackPanels = getTag("StackPanel");
+            for(var i = StackPanels.length -1 ; i >= 0; --i) {
+                console.log("kompilering")
+                var element = makeElem("div"); //StackPanel.element == "div"
+                element.style = ASPSS(StackPanels[i]);
+                element.innerHTML = StackPanels[i].innerHTML;
+                StackPanels[i].replaceWith(element);
+            }
+        }
+        //ASPSS: Assemble Stack Panel Style Sheet
+        function ASPSS(panel) {
+            //for now local element..
+            var stylesheet = [];
+            stylesheet.push("height: " + panel.getAttribute("Height") + "px;");
+            stylesheet.push("width: " + panel.getAttribute("Width") + "px;");
+            stylesheet.push("background-color: " + panel.getAttribute("Background") + ";");
+            return stylesheet.join("");
+        }
+    </script>
+    <script src="bin/xhml.js"></script>
+</html>
