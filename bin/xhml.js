@@ -2170,6 +2170,24 @@ define('xenon/controls/StackPanel/attributes',[], function() {
     return attributes;
 });
 //helper for controls
+//this is known as the main control processor, and handles most of the common functions
+//that controls need
+//updates to this are more or less minimal now due to it being mostly dynamic
+//some controls will need more code, and will have that code where it needs to be
+/*
+Control Processor
+Variables: 
+registeredControls: stores registered controls
+Functions:
+registerControl: registers a control to window.registeredControls for controls.js to be able to read
+processLineXenon: processes a line of css that is compatable with xenon
+processAttribute: processes an attribute and returns it in a xenon-friendly format
+getControls: gets all html elements on the page(root is <HTML> by default)
+processStyles: for a given element, the element's attributes, and a given set of rules, 
+    it adds a style to the element
+processAttributes: for a given element, the element's attributes, and a given set of rules,
+    it adds the proper attributes to the targeted element
+*/
 define('xenon/controls/processor',[
 
 ], function() {
@@ -2196,6 +2214,36 @@ define('xenon/controls/processor',[
         },
         getControls: function() {
             return document.getElementsByTagName("html")[0].getElementsByTagName("*");
+        },
+        //processes styles for a control when it is processing an element
+        //it also now doesnt return a variable, but instead pushes the style to the element
+        processStyles: function(element, data, rules) {
+            var styles = [];
+            for(var i = 0; i < data.length; i++) {
+                var y = 0;
+                for(var e = 0; e < rules.length; e++) {
+                    if(data[i].name == rules[e][1]) {
+                        y = e;
+                    }
+                }
+                var line = this.processLineXenon(data[i], rules[y]);
+                styles.push(line + ";");
+            }
+            element.style = styles.join("");
+        },
+        //process attributes(target element to set attribute, attribute data, attribute rules)
+        processAttributes: function(element, data, rules) {
+            var attributes = [];
+            for(var i = 0; i < data.length; i++) {
+                var y = 0;
+                for(var e = 0; e < rules.length; e++) {
+                    if(data[i].name == rules[e][1]) {
+                        var attribute = this.processAttribute(data[i], rules[e]);
+                        element.setAttribute(attribute[0], attribute[1]);
+                        break;
+                    }
+                }
+            }
         }
     }
     return processor;
@@ -2210,44 +2258,14 @@ define('xenon/controls/StackPanel',[
     var StackPanel = {
         //process a control directed to it
         process: function(control) {
-            //style processing
-            var style = [];
             if(control.tagName == "STACKPANEL" || control.tagName == "StackPanel" || control.tagName == "stackpanel") {
                 var attributes = control.attributes;
-                //process stylesheet attributes
-                for(var i = 0; i < attributes.length; i++) {
-                    var y = 0;
-                    //align the two properties
-                    /* i = attribute
-                    y = attribute's matching property
-                    */
-                    //align the two
-                    for(var e = 0; e < styles.length; e++) {
-                        if(attributes[i].name == styles[e][1]) {
-                            y = e;
-                        }
-                    }
-                    //assemble a constructor that can be passed to the style processor to process a line
-                    var processedLine = controlProcessor.processLineXenon(attributes[i], styles[y]);
-                    style.push(processedLine + ";");
-                }
                 var StackPanel = document.createElement("div");
-                var attrs = [];
-                var processableAttribute = [];
-                for(var i = 0; i < attributes.length; i++) {
-                    var y = 0;
-                    for(var e = 0; e < controlAttrs.length; e++) {
-                        if(attributes[i].name == controlAttrs[e][1]) {
-                            var newAttribute = controlProcessor.processAttribute(attributes[i], controlAttrs[e]);
-                            StackPanel.setAttribute(newAttribute[0], newAttribute[1]);
-                            break;
-                        }
-                    }
-                }
-                //give the new element the processed style
-                StackPanel.style = style.join("");
-                //innerText(not inner HTML because deimcriment)
-                //now we need innerHTML because of nested xaml(duh)
+                //process styles
+                controlProcessor.processStyles(StackPanel, attributes, styles);
+                //process attributes
+                controlProcessor.processAttributes(StackPanel, attributes, controlAttrs);
+                //sync innerHTML between the two
                 StackPanel.innerHTML = control.innerHTML;
                 control.replaceWith(StackPanel);
             }
@@ -2294,45 +2312,11 @@ define('xenon/controls/TextBox',[
         process: function(control) {
             if(control.tagName == "TextBox" || control.tagName == "TEXTBOX" || control.tagName == "textbox") {
                 var attributes = control.attributes;
-                //style processing
-                var style = [];
-                for(var i = 0; i < attributes.length; i++) {
-                    var y = 0;
-                    /*for(var e = 0; e < attributes.length; e++) {
-                        if(e > styles.length) {
-                            break;
-                        }
-                        else if(e < styles.length) {
-                            if(attributes[i].name == styles[e][1]) {
-                                y = e;
-                                break;
-                            }
-                        }
-                    }*/
-                    for(var e = 0; e < styles.length; e++) {
-                        if(attributes[i].name == styles[e][1]) {
-                            y = e;
-                        }
-                    }
-                    var processedLine = controlProcessor.processLineXenon(attributes[i], styles[y]);
-                    style.push(processedLine + ";");
-                }
                 var TextBox = document.createElement("input");
-                //attribute processor
-                var attrs = [];
-                var processableAttribute = [];
-                for(var i = 0; i < attributes.length; i++) {
-                    var y = 0;
-                    for(var e = 0; e < controlAttrs.length; e++) {
-                        if(attributes[i].name == controlAttrs[e][1]) {
-                            var newAttribute = controlProcessor.processAttribute(attributes[i], controlAttrs[e]);
-                            TextBox.setAttribute(newAttribute[0], newAttribute[1]);
-                            break;
-                        }
-                    }
-                }
-                TextBox.style = style.join("");
+                controlProcessor.processStyles(TextBox, attributes, styles);
+                controlProcessor.processAttributes(TextBox, attributes, controlAttrs);
                 //todo: handle attributes
+                //attributes handled and handles well!
                 TextBox.innerText = control.innerText;
                 TextBox.type = "text";
                 control.replaceWith(TextBox);
@@ -2380,32 +2364,10 @@ define('xenon/controls/TextBlock',[
     var TextBlock = {
         //process function
         process: function(control) {
-            var style = [];
             var attributes = control.attributes;
-            for(var i = 0; i < attributes.length; i++) {
-                var y = 0;
-                for(var e = 0; e < styles.length; e++) {
-                    if(attributes[i].name == styles[e][1]) {
-                        y = e;
-                    }
-                }
-                var processedLine = controlProcessor.processLineXenon(attributes[i], styles[y]);
-                style.push(processedLine + ";");
-            }
             var TextBlock = document.createElement("textarea");
-            var attrs = [];
-            var processableAttribute = [];
-            for(var i = 0; i < attributes.length; i++) {
-                var y = 0;
-                for(var e = 0; e < controlAttrs.length; e++) {
-                    if(attributes[i].name == controlAttrs[e][1]) {
-                        var newAttribute = controlProcessor.processAttribute(attributes[i], controlAttrs[e]);
-                        TextBlock.setAttribute(newAttribute[0], newAttribute[1]);
-                        break;
-                    }
-                }
-            }
-            TextBlock.style = style.join("");
+            controlProcessor.processStyles(TextBlock, attributes, styles);
+            controlProcessor.processAttributes(TextBlock, attributes, controlAttrs);
             TextBlock.innerHTML = control.innerHTML;
             TextBlock.readOnly = true;
             control.replaceWith(TextBlock);
