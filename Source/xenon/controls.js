@@ -4,12 +4,14 @@ define([
     "xenon/controls/test",
     "xenon/controls/processor",
     "xenon/controls/TextBlock",
+    "xenon/protoDictionary/proto.js",
 ], function(
     StackPanel,
     TextBox,
     Test,
     controlProcessor,
     TextBlock,
+    Dictionary,
 ) {
     //control holder
     //code

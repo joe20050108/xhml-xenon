@@ -3,3 +3,5 @@ node_modules/
 LanguageConverter/
 bin/converter.js
 bin/converter.html
+Source/internal/tools
+Source/internal/functions/searchByType.js

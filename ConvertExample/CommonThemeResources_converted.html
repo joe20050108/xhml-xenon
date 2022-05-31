@@ -1,0 +1,751 @@
+<head></head><body><div type="ResourceDictionary">
+    <!--
+    2.5 controls should not depends on brushes on ths files except new controls like Expander
+    -->
+    <div type="ResourceDictionary.ThemeDictionaries">
+    <div key="Default" type="ResourceDictionary">
+    
+    <!-- Colors -->
+    
+    <div key="TextFillColorPrimary" type="Color" style="background-color: rgb(255, 255, 255);">#FFFFFF</div>
+    <div key="TextFillColorSecondary" type="Color" style="background-color: rgb(197, 255, 255);">#C5FFFFFF</div>
+    <div key="TextFillColorTertiary" type="Color" style="background-color: rgb(135, 255, 255);">#87FFFFFF</div>
+    <div key="TextFillColorDisabled" type="Color" style="background-color: rgb(93, 255, 255);">#5DFFFFFF</div>
+    <div key="TextFillColorInverse" type="Color" style="background-color: rgba(228, 0, 0, 0);">#E4000000</div>
+    
+    <div key="AccentTextFillColorDisabled" type="Color" style="background-color: rgb(93, 255, 255);">#5DFFFFFF</div>
+    <div key="TextOnAccentFillColorSelectedText" type="Color" style="background-color: rgb(255, 255, 255);">#FFFFFF</div>
+    <div key="TextOnAccentFillColorPrimary" type="Color" style="background-color: rgb(0, 0, 0);">#000000</div>
+    <div key="TextOnAccentFillColorSecondary" type="Color" style="background-color: rgba(128, 0, 0, 0);">#80000000</div>
+    <div key="TextOnAccentFillColorDisabled" type="Color" style="background-color: rgb(135, 255, 255);">#87FFFFFF</div>
+    
+    <div key="ControlFillColorDefault" type="Color" style="background-color: rgb(15, 255, 255);">#0FFFFFFF</div>
+    <div key="ControlFillColorSecondary" type="Color" style="background-color: rgb(21, 255, 255);">#15FFFFFF</div>
+    <div key="ControlFillColorTertiary" type="Color" style="background-color: rgb(8, 255, 255);">#08FFFFFF</div>
+    <div key="ControlFillColorDisabled" type="Color" style="background-color: rgb(11, 255, 255);">#0BFFFFFF</div>
+    <div key="ControlFillColorTransparent" type="Color" style="background-color: rgb(0, 255, 255);">#00FFFFFF</div>
+    <div key="ControlFillColorInputActive" type="Color" style="background-color: rgba(179, 30, 30, 0.118);">#B31E1E1E</div>
+    
+    <div key="ControlStrongFillColorDefault" type="Color" style="background-color: rgb(139, 255, 255);">#8BFFFFFF</div>
+    <div key="ControlStrongFillColorDisabled" type="Color" style="background-color: rgb(63, 255, 255);">#3FFFFFFF</div>
+    
+    <div key="ControlSolidFillColorDefault" type="Color" style="background-color: rgb(69, 69, 69);">#454545</div>
+    
+    <div key="SubtleFillColorTransparent" type="Color" style="background-color: rgb(0, 255, 255);">#00FFFFFF</div>
+    <div key="SubtleFillColorSecondary" type="Color" style="background-color: rgb(15, 255, 255);">#0FFFFFFF</div>
+    <div key="SubtleFillColorTertiary" type="Color" style="background-color: rgb(10, 255, 255);">#0AFFFFFF</div>
+    <div key="SubtleFillColorDisabled" type="Color" style="background-color: rgb(0, 255, 255);">#00FFFFFF</div>
+    
+    <div key="ControlAltFillColorTransparent" type="Color" style="background-color: rgb(0, 255, 255);">#00FFFFFF</div>
+    <div key="ControlAltFillColorSecondary" type="Color" style="background-color: rgba(25, 0, 0, 0);">#19000000</div>
+    <div key="ControlAltFillColorTertiary" type="Color" style="background-color: rgb(11, 255, 255);">#0BFFFFFF</div>
+    <div key="ControlAltFillColorQuarternary" type="Color" style="background-color: rgb(18, 255, 255);">#12FFFFFF</div>
+    <div key="ControlAltFillColorDisabled" type="Color" style="background-color: rgb(0, 255, 255);">#00FFFFFF</div>
+    
+    <div key="ControlOnImageFillColorDefault" type="Color" style="background-color: rgba(179, 28, 28, 0.11);">#B31C1C1C</div>
+    <div key="ControlOnImageFillColorSecondary" type="Color" style="background-color: rgb(26, 26, 26);">#1A1A1A</div>
+    <div key="ControlOnImageFillColorTertiary" type="Color" style="background-color: rgb(19, 19, 19);">#131313</div>
+    <div key="ControlOnImageFillColorDisabled" type="Color" style="background-color: rgb(30, 30, 30);">#1E1E1E</div>
+    
+    <div key="AccentFillColorDisabled" type="Color" style="background-color: rgb(40, 255, 255);">#28FFFFFF</div>
+    
+    <div key="ControlStrokeColorDefault" type="Color" style="background-color: rgb(18, 255, 255);">#12FFFFFF</div>
+    <div key="ControlStrokeColorSecondary" type="Color" style="background-color: rgb(24, 255, 255);">#18FFFFFF</div>
+    <div key="ControlStrokeColorOnAccentDefault" type="Color" style="background-color: rgb(20, 255, 255);">#14FFFFFF</div>
+    <div key="ControlStrokeColorOnAccentSecondary" type="Color" style="background-color: rgba(35, 0, 0, 0);">#23000000</div>
+    <div key="ControlStrokeColorOnAccentTertiary" type="Color" style="background-color: rgba(55, 0, 0, 0);">#37000000</div>
+    <div key="ControlStrokeColorOnAccentDisabled" type="Color" style="background-color: rgba(51, 0, 0, 0);">#33000000</div>
+    
+    <div key="ControlStrokeColorForStrongFillWhenOnImage" type="Color" style="background-color: rgba(107, 0, 0, 0);">#6B000000</div>
+    
+    <div key="CardStrokeColorDefault" type="Color" style="background-color: rgba(25, 0, 0, 0);">#19000000</div>
+    <div key="CardStrokeColorDefaultSolid" type="Color" style="background-color: rgb(28, 28, 28);">#1C1C1C</div>
+    
+    <div key="ControlStrongStrokeColorDefault" type="Color" style="background-color: rgb(139, 255, 255);">#8BFFFFFF</div>
+    <div key="ControlStrongStrokeColorDisabled" type="Color" style="background-color: rgb(40, 255, 255);">#28FFFFFF</div>
+    
+    <div key="SurfaceStrokeColorDefault" type="Color" style="background-color: rgba(102, 117, 117, 0.46);">#66757575</div>
+    <div key="SurfaceStrokeColorFlyout" type="Color" style="background-color: rgba(51, 0, 0, 0);">#33000000</div>
+    <div key="SurfaceStrokeColorInverse" type="Color" style="background-color: rgba(15, 0, 0, 0);">#0F000000</div>
+    
+    <div key="DividerStrokeColorDefault" type="Color" style="background-color: rgb(21, 255, 255);">#15FFFFFF</div>
+    
+    <div key="FocusStrokeColorOuter" type="Color" style="background-color: rgb(255, 255, 255);">#FFFFFF</div>
+    <div key="FocusStrokeColorInner" type="Color" style="background-color: rgba(179, 0, 0, 0);">#B3000000</div>
+    
+    <div key="CardBackgroundFillColorDefault" type="Color" style="background-color: rgb(13, 255, 255);">#0DFFFFFF</div>
+    <div key="CardBackgroundFillColorSecondary" type="Color" style="background-color: rgb(8, 255, 255);">#08FFFFFF</div>
+    
+    <div key="SmokeFillColorDefault" type="Color" style="background-color: rgba(77, 0, 0, 0);">#4D000000</div>
+    
+    <div key="LayerFillColorDefault" type="Color" style="background-color: rgba(76, 58, 58, 0.227);">#4C3A3A3A</div>
+    <div key="LayerFillColorAlt" type="Color" style="background-color: rgb(13, 255, 255);">#0DFFFFFF</div>
+    <div key="LayerOnAcrylicFillColorDefault" type="Color" style="background-color: rgb(9, 255, 255);">#09FFFFFF</div>
+    <div key="LayerOnAccentAcrylicFillColorDefault" type="Color" style="background-color: rgb(9, 255, 255);">#09FFFFFF</div>
+    
+    <div key="LayerOnMicaBaseAltFillColorDefault" type="Color" style="background-color: rgba(115, 58, 58, 0.227);">#733A3A3A</div>
+    <div key="LayerOnMicaBaseAltFillColorSecondary" type="Color" style="background-color: rgb(15, 255, 255);">#0FFFFFFF</div>
+    <div key="LayerOnMicaBaseAltFillColorTertiary" type="Color" style="background-color: rgb(44, 44, 44);">#2C2C2C</div>
+    <div key="LayerOnMicaBaseAltFillColorTransparent" type="Color" style="background-color: rgb(0, 255, 255);">#00FFFFFF</div>
+    
+    <div key="SolidBackgroundFillColorBase" type="Color" style="background-color: rgb(32, 32, 32);">#202020</div>
+    <div key="SolidBackgroundFillColorSecondary" type="Color" style="background-color: rgb(28, 28, 28);">#1C1C1C</div>
+    <div key="SolidBackgroundFillColorTertiary" type="Color" style="background-color: rgb(40, 40, 40);">#282828</div>
+    <div key="SolidBackgroundFillColorQuarternary" type="Color" style="background-color: rgb(44, 44, 44);">#2C2C2C</div>
+    <div key="SolidBackgroundFillColorTransparent" type="Color" style="background-color: rgba(0, 32, 32, 0.125);">#00202020</div>
+    <div key="SolidBackgroundFillColorBaseAlt" type="Color" style="background-color: rgb(10, 10, 10);">#0A0A0A</div>
+    
+    <div key="SystemFillColorSuccess" type="Color" style="background-color: rgb(108, 203, 95);">#6CCB5F</div>
+    <div key="SystemFillColorCaution" type="Color" style="background-color: rgb(252, 225, 0);">#FCE100</div>
+    <div key="SystemFillColorCritical" type="Color" style="background-color: rgb(255, 153, 164);">#FF99A4</div>
+    <div key="SystemFillColorNeutral" type="Color" style="background-color: rgb(139, 255, 255);">#8BFFFFFF</div>
+    <div key="SystemFillColorSolidNeutral" type="Color" style="background-color: rgb(157, 157, 157);">#9D9D9D</div>
+    <div key="SystemFillColorAttentionBackground" type="Color" style="background-color: rgb(8, 255, 255);">#08FFFFFF</div>
+    <div key="SystemFillColorSuccessBackground" type="Color" style="background-color: rgb(57, 61, 27);">#393D1B</div>
+    <div key="SystemFillColorCautionBackground" type="Color" style="background-color: rgb(67, 53, 25);">#433519</div>
+    <div key="SystemFillColorCriticalBackground" type="Color" style="background-color: rgb(68, 39, 38);">#442726</div>
+    <div key="SystemFillColorNeutralBackground" type="Color" style="background-color: rgb(8, 255, 255);">#08FFFFFF</div>
+    <div key="SystemFillColorSolidAttentionBackground" type="Color" style="background-color: rgb(46, 46, 46);">#2E2E2E</div>
+    <div key="SystemFillColorSolidNeutralBackground" type="Color" style="background-color: rgb(46, 46, 46);">#2E2E2E</div>
+    
+    <!-- Brushes -->
+    
+    <div key="TextFillColorPrimaryBrush" color="{StaticResource TextFillColorPrimary}" type="SolidColorBrush">
+    <div key="TextFillColorSecondaryBrush" color="{StaticResource TextFillColorSecondary}" type="SolidColorBrush">
+    <div key="TextFillColorTertiaryBrush" color="{StaticResource TextFillColorTertiary}" type="SolidColorBrush">
+    <div key="TextFillColorDisabledBrush" color="{StaticResource TextFillColorDisabled}" type="SolidColorBrush">
+    <div key="TextFillColorInverseBrush" color="{StaticResource TextFillColorInverse}" type="SolidColorBrush">
+    
+    <div key="AccentTextFillColorPrimaryBrush" color="{ThemeResource SystemAccentColorLight3}" type="SolidColorBrush">
+    <div key="AccentTextFillColorSecondaryBrush" color="{ThemeResource SystemAccentColorLight3}" type="SolidColorBrush">
+    <div key="AccentTextFillColorTertiaryBrush" color="{ThemeResource SystemAccentColorLight2}" type="SolidColorBrush">
+    <div key="AccentTextFillColorDisabledBrush" color="{StaticResource AccentTextFillColorDisabled}" type="SolidColorBrush">
+    
+    <div key="TextOnAccentFillColorSelectedTextBrush" color="{StaticResource TextOnAccentFillColorSelectedText}" type="SolidColorBrush">
+    
+    <div key="TextOnAccentFillColorPrimaryBrush" color="{StaticResource TextOnAccentFillColorPrimary}" type="SolidColorBrush">
+    <div key="TextOnAccentFillColorSecondaryBrush" color="{StaticResource TextOnAccentFillColorSecondary}" type="SolidColorBrush">
+    <div key="TextOnAccentFillColorDisabledBrush" color="{StaticResource TextOnAccentFillColorDisabled}" type="SolidColorBrush">
+    
+    <div key="ControlFillColorDefaultBrush" color="{StaticResource ControlFillColorDefault}" type="SolidColorBrush">
+    <div key="ControlFillColorSecondaryBrush" color="{StaticResource ControlFillColorSecondary}" type="SolidColorBrush">
+    <div key="ControlFillColorTertiaryBrush" color="{StaticResource ControlFillColorTertiary}" type="SolidColorBrush">
+    <div key="ControlFillColorDisabledBrush" color="{StaticResource ControlFillColorDisabled}" type="SolidColorBrush">
+    <div key="ControlFillColorTransparentBrush" color="{StaticResource ControlFillColorTransparent}" type="SolidColorBrush">
+    <div key="ControlFillColorInputActiveBrush" color="{StaticResource ControlFillColorInputActive}" type="SolidColorBrush">
+    
+    <div key="ControlStrongFillColorDefaultBrush" color="{StaticResource ControlStrongFillColorDefault}" type="SolidColorBrush">
+    <div key="ControlStrongFillColorDisabledBrush" color="{StaticResource ControlStrongFillColorDisabled}" type="SolidColorBrush">
+    
+    <div key="ControlSolidFillColorDefaultBrush" color="{StaticResource ControlSolidFillColorDefault}" type="SolidColorBrush">
+    
+    <div key="SubtleFillColorTransparentBrush" color="{StaticResource SubtleFillColorTransparent}" type="SolidColorBrush">
+    <div key="SubtleFillColorSecondaryBrush" color="{StaticResource SubtleFillColorSecondary}" type="SolidColorBrush">
+    <div key="SubtleFillColorTertiaryBrush" color="{StaticResource SubtleFillColorTertiary}" type="SolidColorBrush">
+    <div key="SubtleFillColorDisabledBrush" color="{StaticResource SubtleFillColorDisabled}" type="SolidColorBrush">
+    
+    <div key="ControlAltFillColorTransparentBrush" color="{StaticResource ControlAltFillColorTransparent}" type="SolidColorBrush">
+    <div key="ControlAltFillColorSecondaryBrush" color="{StaticResource ControlAltFillColorSecondary}" type="SolidColorBrush">
+    <div key="ControlAltFillColorTertiaryBrush" color="{StaticResource ControlAltFillColorTertiary}" type="SolidColorBrush">
+    <div key="ControlAltFillColorQuarternaryBrush" color="{StaticResource ControlAltFillColorQuarternary}" type="SolidColorBrush">
+    <div key="ControlAltFillColorDisabledBrush" color="{StaticResource ControlAltFillColorDisabled}" type="SolidColorBrush">
+    
+    <div key="ControlOnImageFillColorDefaultBrush" color="{StaticResource ControlOnImageFillColorDefault}" type="SolidColorBrush">
+    <div key="ControlOnImageFillColorSecondaryBrush" color="{StaticResource ControlOnImageFillColorSecondary}" type="SolidColorBrush">
+    <div key="ControlOnImageFillColorTertiaryBrush" color="{StaticResource ControlOnImageFillColorTertiary}" type="SolidColorBrush">
+    <div key="ControlOnImageFillColorDisabledBrush" color="{StaticResource ControlOnImageFillColorDisabled}" type="SolidColorBrush">
+    
+    <div key="AccentFillColorSelectedTextBackgroundBrush" color="{ThemeResource SystemAccentColor}" type="SolidColorBrush">
+    
+    <div key="AccentFillColorDefaultBrush" color="{ThemeResource SystemAccentColorLight2}" type="SolidColorBrush">
+    <div key="AccentFillColorSecondaryBrush" color="{ThemeResource SystemAccentColorLight2}" type="SolidColorBrush">
+    <div key="AccentFillColorTertiaryBrush" color="{ThemeResource SystemAccentColorLight2}" type="SolidColorBrush">
+    <div key="AccentFillColorDisabledBrush" color="{StaticResource AccentFillColorDisabled}" type="SolidColorBrush">
+    
+    <div key="ControlStrokeColorDefaultBrush" color="{StaticResource ControlStrokeColorDefault}" type="SolidColorBrush">
+    <div key="ControlStrokeColorSecondaryBrush" color="{StaticResource ControlStrokeColorSecondary}" type="SolidColorBrush">
+    <div key="ControlStrokeColorOnAccentDefaultBrush" color="{StaticResource ControlStrokeColorOnAccentDefault}" type="SolidColorBrush">
+    <div key="ControlStrokeColorOnAccentSecondaryBrush" color="{StaticResource ControlStrokeColorOnAccentSecondary}" type="SolidColorBrush">
+    <div key="ControlStrokeColorOnAccentTertiaryBrush" color="{StaticResource ControlStrokeColorOnAccentTertiary}" type="SolidColorBrush">
+    <div key="ControlStrokeColorOnAccentDisabledBrush" color="{StaticResource ControlStrokeColorOnAccentDisabled}" type="SolidColorBrush">
+    
+    <div key="ControlStrokeColorForStrongFillWhenOnImageBrush" color="{StaticResource ControlStrokeColorForStrongFillWhenOnImage}" type="SolidColorBrush">
+    
+    <div key="CardStrokeColorDefaultBrush" color="{StaticResource CardStrokeColorDefault}" type="SolidColorBrush">
+    <div key="CardStrokeColorDefaultSolidBrush" color="{StaticResource CardStrokeColorDefaultSolid}" type="SolidColorBrush">
+    
+    <div key="ControlStrongStrokeColorDefaultBrush" color="{StaticResource ControlStrongStrokeColorDefault}" type="SolidColorBrush">
+    <div key="ControlStrongStrokeColorDisabledBrush" color="{StaticResource ControlStrongStrokeColorDisabled}" type="SolidColorBrush">
+    
+    <div key="SurfaceStrokeColorDefaultBrush" color="{StaticResource SurfaceStrokeColorDefault}" type="SolidColorBrush">
+    <div key="SurfaceStrokeColorFlyoutBrush" color="{StaticResource SurfaceStrokeColorFlyout}" type="SolidColorBrush">
+    <div key="SurfaceStrokeColorInverseBrush" color="{StaticResource SurfaceStrokeColorInverse}" type="SolidColorBrush">
+    
+    <div key="DividerStrokeColorDefaultBrush" color="{StaticResource DividerStrokeColorDefault}" type="SolidColorBrush">
+    
+    <div key="FocusStrokeColorOuterBrush" color="{StaticResource FocusStrokeColorOuter}" type="SolidColorBrush">
+    <div key="FocusStrokeColorInnerBrush" color="{StaticResource FocusStrokeColorInner}" type="SolidColorBrush">
+    
+    <div key="CardBackgroundFillColorDefaultBrush" color="{StaticResource CardBackgroundFillColorDefault}" type="SolidColorBrush">
+    <div key="CardBackgroundFillColorSecondaryBrush" color="{StaticResource CardBackgroundFillColorSecondary}" type="SolidColorBrush">
+    
+    <div key="SmokeFillColorDefaultBrush" color="{StaticResource SmokeFillColorDefault}" type="SolidColorBrush">
+    
+    <div key="LayerFillColorDefaultBrush" color="{StaticResource LayerFillColorDefault}" type="SolidColorBrush">
+    <div key="LayerFillColorAltBrush" color="{StaticResource LayerFillColorAlt}" type="SolidColorBrush">
+    <div key="LayerOnAcrylicFillColorDefaultBrush" color="{StaticResource LayerOnAcrylicFillColorDefault}" type="SolidColorBrush">
+    <div key="LayerOnAccentAcrylicFillColorDefaultBrush" color="{StaticResource LayerOnAccentAcrylicFillColorDefault}" type="SolidColorBrush">
+    
+    <div key="LayerOnMicaBaseAltFillColorDefaultBrush" color="{StaticResource LayerOnMicaBaseAltFillColorDefault}" type="SolidColorBrush">
+    <div key="LayerOnMicaBaseAltFillColorSecondaryBrush" color="{StaticResource LayerOnMicaBaseAltFillColorSecondary}" type="SolidColorBrush">
+    <div key="LayerOnMicaBaseAltFillColorTertiaryBrush" color="{StaticResource LayerOnMicaBaseAltFillColorTertiary}" type="SolidColorBrush">
+    <div key="LayerOnMicaBaseAltFillColorTransparentBrush" color="{StaticResource LayerOnMicaBaseAltFillColorTransparent}" type="SolidColorBrush">
+    
+    <div key="SolidBackgroundFillColorBaseBrush" color="{StaticResource SolidBackgroundFillColorBase}" type="SolidColorBrush">
+    <div key="SolidBackgroundFillColorSecondaryBrush" color="{StaticResource SolidBackgroundFillColorSecondary}" type="SolidColorBrush">
+    <div key="SolidBackgroundFillColorTertiaryBrush" color="{StaticResource SolidBackgroundFillColorTertiary}" type="SolidColorBrush">
+    <div key="SolidBackgroundFillColorQuarternaryBrush" color="{StaticResource SolidBackgroundFillColorQuarternary}" type="SolidColorBrush">
+    <div key="SolidBackgroundFillColorBaseAltBrush" color="{StaticResource SolidBackgroundFillColorBaseAlt}" type="SolidColorBrush">
+    
+    <div key="SystemFillColorAttentionBrush" color="{ThemeResource SystemAccentColorLight2}" type="SolidColorBrush">
+    <div key="SystemFillColorSuccessBrush" color="{StaticResource SystemFillColorSuccess}" type="SolidColorBrush">
+    <div key="SystemFillColorCautionBrush" color="{StaticResource SystemFillColorCaution}" type="SolidColorBrush">
+    <div key="SystemFillColorCriticalBrush" color="{StaticResource SystemFillColorCritical}" type="SolidColorBrush">
+    <div key="SystemFillColorNeutralBrush" color="{StaticResource SystemFillColorNeutral}" type="SolidColorBrush">
+    <div key="SystemFillColorSolidNeutralBrush" color="{StaticResource SystemFillColorSolidNeutral}" type="SolidColorBrush">
+    <div key="SystemFillColorAttentionBackgroundBrush" color="{StaticResource SystemFillColorAttentionBackground}" type="SolidColorBrush">
+    <div key="SystemFillColorSuccessBackgroundBrush" color="{StaticResource SystemFillColorSuccessBackground}" type="SolidColorBrush">
+    <div key="SystemFillColorCautionBackgroundBrush" color="{StaticResource SystemFillColorCautionBackground}" type="SolidColorBrush">
+    <div key="SystemFillColorCriticalBackgroundBrush" color="{StaticResource SystemFillColorCriticalBackground}" type="SolidColorBrush">
+    <div key="SystemFillColorNeutralBackgroundBrush" color="{StaticResource SystemFillColorNeutralBackground}" type="SolidColorBrush">
+    <div key="SystemFillColorSolidAttentionBackgroundBrush" color="{StaticResource SystemFillColorSolidAttentionBackground}" type="SolidColorBrush">
+    <div key="SystemFillColorSolidNeutralBackgroundBrush" color="{StaticResource SystemFillColorSolidNeutralBackground}" type="SolidColorBrush">
+    
+    <!-- Duplication from HighContrast colors to match keys, set to magenta to show these should not be used -->
+    <div key="SystemColorWindowTextColorBrush" color="#FF00FF" type="SolidColorBrush">
+    <div key="SystemColorWindowColorBrush" color="#FF00FF" type="SolidColorBrush">
+    <div key="SystemColorButtonFaceColorBrush" color="#FF00FF" type="SolidColorBrush">
+    <div key="SystemColorButtonTextColorBrush" color="#FF00FF" type="SolidColorBrush">
+    <div key="SystemColorHighlightColorBrush" color="#FF00FF" type="SolidColorBrush">
+    <div key="SystemColorHighlightTextColorBrush" color="#FF00FF" type="SolidColorBrush">
+    <div key="SystemColorHotlightColorBrush" color="#FF00FF" type="SolidColorBrush">
+    <div key="SystemColorGrayTextColorBrush" color="#FF00FF" type="SolidColorBrush">
+    
+    <!-- Elevation border brushes-->
+    
+    <div key="ControlElevationBorderBrush" mappingmode="Absolute" startpoint="0,0" endpoint="0,3" type="LinearGradientBrush">
+    <div type="LinearGradientBrush.GradientStops">
+    <div offset="0.33" color="{StaticResource ControlStrokeColorSecondary}" type="GradientStop">
+    <div offset="1.0" color="{StaticResource ControlStrokeColorDefault}" type="GradientStop">
+    </div></div></div>
+    </div>
+    
+    <div key="CircleElevationBorderBrush" mappingmode="RelativeToBoundingBox" startpoint="0,0" endpoint="0,1" type="LinearGradientBrush">
+    <div type="LinearGradientBrush.GradientStops">
+    <div offset="0.70" color="{StaticResource ControlStrokeColorSecondary}" type="GradientStop">
+    <div offset="0.50" color="{StaticResource ControlStrokeColorDefault}" type="GradientStop">
+    </div></div></div>
+    </div>
+    
+    <div key="AccentControlElevationBorderBrush" mappingmode="Absolute" startpoint="0,0" endpoint="0,3" type="LinearGradientBrush">
+    <div type="LinearGradientBrush.RelativeTransform">
+    <div scaley="-1" centery="0.5" type="ScaleTransform">
+    </div></div>
+    <div type="LinearGradientBrush.GradientStops">
+    <div offset="0.33" color="{StaticResource ControlStrokeColorOnAccentSecondary}" type="GradientStop">
+    <div offset="1.0" color="{StaticResource ControlStrokeColorOnAccentDefault}" type="GradientStop">
+    </div></div></div>
+    </div>
+    </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
+    
+    <div key="Light" type="ResourceDictionary">
+    
+    <!-- Colors -->
+    
+    <div key="TextFillColorPrimary" type="Color" style="background-color: rgba(228, 0, 0, 0);">#E4000000</div>
+    <div key="TextFillColorSecondary" type="Color" style="background-color: rgba(158, 0, 0, 0);">#9E000000</div>
+    <div key="TextFillColorTertiary" type="Color" style="background-color: rgba(114, 0, 0, 0);">#72000000</div>
+    <div key="TextFillColorDisabled" type="Color" style="background-color: rgba(92, 0, 0, 0);">#5C000000</div>
+    <div key="TextFillColorInverse" type="Color" style="background-color: rgb(255, 255, 255);">#FFFFFF</div>
+    
+    <div key="AccentTextFillColorDisabled" type="Color" style="background-color: rgba(92, 0, 0, 0);">#5C000000</div>
+    
+    <div key="TextOnAccentFillColorSelectedText" type="Color" style="background-color: rgb(255, 255, 255);">#FFFFFF</div>
+    
+    <div key="TextOnAccentFillColorPrimary" type="Color" style="background-color: rgb(255, 255, 255);">#FFFFFF</div>
+    <div key="TextOnAccentFillColorSecondary" type="Color" style="background-color: rgb(179, 255, 255);">#B3FFFFFF</div>
+    <div key="TextOnAccentFillColorDisabled" type="Color" style="background-color: rgb(255, 255, 255);">#FFFFFF</div>
+    
+    <div key="ControlFillColorDefault" type="Color" style="background-color: rgb(179, 255, 255);">#B3FFFFFF</div>
+    <div key="ControlFillColorSecondary" type="Color" style="background-color: rgba(128, 249, 249, 0.976);">#80F9F9F9</div>
+    <div key="ControlFillColorTertiary" type="Color" style="background-color: rgba(77, 249, 249, 0.976);">#4DF9F9F9</div>
+    <div key="ControlFillColorDisabled" type="Color" style="background-color: rgba(77, 249, 249, 0.976);">#4DF9F9F9</div>
+    <div key="ControlFillColorTransparent" type="Color" style="background-color: rgb(0, 255, 255);">#00FFFFFF</div>
+    <div key="ControlFillColorInputActive" type="Color" style="background-color: rgb(255, 255, 255);">#FFFFFF</div>
+    
+    <div key="ControlStrongFillColorDefault" type="Color" style="background-color: rgba(114, 0, 0, 0);">#72000000</div>
+    <div key="ControlStrongFillColorDisabled" type="Color" style="background-color: rgba(81, 0, 0, 0);">#51000000</div>
+    
+    <div key="ControlSolidFillColorDefault" type="Color" style="background-color: rgb(255, 255, 255);">#FFFFFF</div>
+    
+    <div key="SubtleFillColorTransparent" type="Color" style="background-color: rgb(0, 255, 255);">#00FFFFFF</div>
+    <div key="SubtleFillColorSecondary" type="Color" style="background-color: rgba(9, 0, 0, 0);">#09000000</div>
+    <div key="SubtleFillColorTertiary" type="Color" style="background-color: rgba(6, 0, 0, 0);">#06000000</div>
+    <div key="SubtleFillColorDisabled" type="Color" style="background-color: rgb(0, 255, 255);">#00FFFFFF</div>
+    
+    <div key="ControlAltFillColorTransparent" type="Color" style="background-color: rgb(0, 255, 255);">#00FFFFFF</div>
+    <div key="ControlAltFillColorSecondary" type="Color" style="background-color: rgba(6, 0, 0, 0);">#06000000</div>
+    <div key="ControlAltFillColorTertiary" type="Color" style="background-color: rgba(15, 0, 0, 0);">#0F000000</div>
+    <div key="ControlAltFillColorQuarternary" type="Color" style="background-color: rgba(24, 0, 0, 0);">#18000000</div>
+    <div key="ControlAltFillColorDisabled" type="Color" style="background-color: rgb(0, 255, 255);">#00FFFFFF</div>
+    
+    <div key="ControlOnImageFillColorDefault" type="Color" style="background-color: rgb(201, 255, 255);">#C9FFFFFF</div>
+    <div key="ControlOnImageFillColorSecondary" type="Color" style="background-color: rgb(243, 243, 243);">#F3F3F3</div>
+    <div key="ControlOnImageFillColorTertiary" type="Color" style="background-color: rgb(235, 235, 235);">#EBEBEB</div>
+    <div key="ControlOnImageFillColorDisabled" type="Color" style="background-color: rgb(0, 255, 255);">#00FFFFFF</div>
+    
+    <div key="AccentFillColorDisabled" type="Color" style="background-color: rgba(55, 0, 0, 0);">#37000000</div>
+    
+    <div key="ControlStrokeColorDefault" type="Color" style="background-color: rgba(15, 0, 0, 0);">#0F000000</div>
+    <div key="ControlStrokeColorSecondary" type="Color" style="background-color: rgba(41, 0, 0, 0);">#29000000</div>
+    <div key="ControlStrokeColorOnAccentDefault" type="Color" style="background-color: rgb(20, 255, 255);">#14FFFFFF</div>
+    <div key="ControlStrokeColorOnAccentSecondary" type="Color" style="background-color: rgba(102, 0, 0, 0);">#66000000</div>
+    <div key="ControlStrokeColorOnAccentTertiary" type="Color" style="background-color: rgba(55, 0, 0, 0);">#37000000</div>
+    <div key="ControlStrokeColorOnAccentDisabled" type="Color" style="background-color: rgba(15, 0, 0, 0);">#0F000000</div>
+    
+    <div key="ControlStrokeColorForStrongFillWhenOnImage" type="Color" style="background-color: rgb(89, 255, 255);">#59FFFFFF</div>
+    
+    <div key="CardStrokeColorDefault" type="Color" style="background-color: rgba(15, 0, 0, 0);">#0F000000</div>
+    <div key="CardStrokeColorDefaultSolid" type="Color" style="background-color: rgb(235, 235, 235);">#EBEBEB</div>
+    
+    <div key="ControlStrongStrokeColorDefault" type="Color" style="background-color: rgba(114, 0, 0, 0);">#72000000</div>
+    <div key="ControlStrongStrokeColorDisabled" type="Color" style="background-color: rgba(55, 0, 0, 0);">#37000000</div>
+    
+    <div key="SurfaceStrokeColorDefault" type="Color" style="background-color: rgba(102, 117, 117, 0.46);">#66757575</div>
+    <div key="SurfaceStrokeColorFlyout" type="Color" style="background-color: rgba(15, 0, 0, 0);">#0F000000</div>
+    <div key="SurfaceStrokeColorInverse" type="Color" style="background-color: rgb(21, 255, 255);">#15FFFFFF</div>
+    
+    <div key="DividerStrokeColorDefault" type="Color" style="background-color: rgba(15, 0, 0, 0);">#0F000000</div>
+    
+    <div key="FocusStrokeColorOuter" type="Color" style="background-color: rgba(228, 0, 0, 0);">#E4000000</div>
+    <div key="FocusStrokeColorInner" type="Color" style="background-color: rgb(179, 255, 255);">#B3FFFFFF</div>
+    
+    <div key="CardBackgroundFillColorDefault" type="Color" style="background-color: rgb(179, 255, 255);">#B3FFFFFF</div>
+    <div key="CardBackgroundFillColorSecondary" type="Color" style="background-color: rgba(128, 246, 246, 0.965);">#80F6F6F6</div>
+    
+    <div key="SmokeFillColorDefault" type="Color" style="background-color: rgba(77, 0, 0, 0);">#4D000000</div>
+    
+    <div key="LayerFillColorDefault" type="Color" style="background-color: rgb(128, 255, 255);">#80FFFFFF</div>
+    <div key="LayerFillColorAlt" type="Color" style="background-color: rgb(255, 255, 255);">#FFFFFF</div>
+    <div key="LayerOnAcrylicFillColorDefault" type="Color" style="background-color: rgb(64, 255, 255);">#40FFFFFF</div>
+    <div key="LayerOnAccentAcrylicFillColorDefault" type="Color" style="background-color: rgb(64, 255, 255);">#40FFFFFF</div>
+    
+    <div key="LayerOnMicaBaseAltFillColorDefault" type="Color" style="background-color: rgb(179, 255, 255);">#B3FFFFFF</div>
+    <div key="LayerOnMicaBaseAltFillColorSecondary" type="Color" style="background-color: rgba(10, 0, 0, 0);">#0A000000</div>
+    <div key="LayerOnMicaBaseAltFillColorTertiary" type="Color" style="background-color: rgb(249, 249, 249);">#F9F9F9</div>
+    <div key="LayerOnMicaBaseAltFillColorTransparent" type="Color" style="background-color: rgba(0, 0, 0, 0);">#00000000</div>
+    
+    <div key="SolidBackgroundFillColorBase" type="Color" style="background-color: rgb(243, 243, 243);">#F3F3F3</div>
+    <div key="SolidBackgroundFillColorSecondary" type="Color" style="background-color: rgb(238, 238, 238);">#EEEEEE</div>
+    <div key="SolidBackgroundFillColorTertiary" type="Color" style="background-color: rgb(249, 249, 249);">#F9F9F9</div>
+    <div key="SolidBackgroundFillColorQuarternary" type="Color" style="background-color: rgb(255, 255, 255);">#FFFFFF</div>
+    <div key="SolidBackgroundFillColorTransparent" type="Color" style="background-color: rgba(0, 243, 243, 0.953);">#00F3F3F3</div>
+    <div key="SolidBackgroundFillColorBaseAlt" type="Color" style="background-color: rgb(218, 218, 218);">#DADADA</div>
+    
+    <div key="SystemFillColorSuccess" type="Color" style="background-color: rgb(15, 123, 15);">#0F7B0F</div>
+    <div key="SystemFillColorCaution" type="Color" style="background-color: rgb(157, 93, 0);">#9D5D00</div>
+    <div key="SystemFillColorCritical" type="Color" style="background-color: rgb(196, 43, 28);">#C42B1C</div>
+    <div key="SystemFillColorNeutral" type="Color" style="background-color: rgba(114, 0, 0, 0);">#72000000</div>
+    <div key="SystemFillColorSolidNeutral" type="Color" style="background-color: rgb(138, 138, 138);">#8A8A8A</div>
+    <div key="SystemFillColorAttentionBackground" type="Color" style="background-color: rgba(128, 246, 246, 0.965);">#80F6F6F6</div>
+    <div key="SystemFillColorSuccessBackground" type="Color" style="background-color: rgb(223, 246, 221);">#DFF6DD</div>
+    <div key="SystemFillColorCautionBackground" type="Color" style="background-color: rgb(255, 244, 206);">#FFF4CE</div>
+    <div key="SystemFillColorCriticalBackground" type="Color" style="background-color: rgb(253, 231, 233);">#FDE7E9</div>
+    <div key="SystemFillColorNeutralBackground" type="Color" style="background-color: rgba(6, 0, 0, 0);">#06000000</div>
+    <div key="SystemFillColorSolidAttentionBackground" type="Color" style="background-color: rgb(247, 247, 247);">#F7F7F7</div>
+    <div key="SystemFillColorSolidNeutralBackground" type="Color" style="background-color: rgb(243, 243, 243);">#F3F3F3</div>
+    
+    <!-- Brushes -->
+    
+    <div key="TextFillColorPrimaryBrush" color="{StaticResource TextFillColorPrimary}" type="SolidColorBrush">
+    <div key="TextFillColorSecondaryBrush" color="{StaticResource TextFillColorSecondary}" type="SolidColorBrush">
+    <div key="TextFillColorTertiaryBrush" color="{StaticResource TextFillColorTertiary}" type="SolidColorBrush">
+    <div key="TextFillColorDisabledBrush" color="{StaticResource TextFillColorDisabled}" type="SolidColorBrush">
+    <div key="TextFillColorInverseBrush" color="{StaticResource TextFillColorInverse}" type="SolidColorBrush">
+    
+    <div key="AccentTextFillColorPrimaryBrush" color="{ThemeResource SystemAccentColorDark2}" type="SolidColorBrush">
+    <div key="AccentTextFillColorSecondaryBrush" color="{ThemeResource SystemAccentColorDark3}" type="SolidColorBrush">
+    <div key="AccentTextFillColorTertiaryBrush" color="{ThemeResource SystemAccentColorDark1}" type="SolidColorBrush">
+    <div key="AccentTextFillColorDisabledBrush" color="{StaticResource AccentTextFillColorDisabled}" type="SolidColorBrush">
+    
+    <div key="TextOnAccentFillColorSelectedTextBrush" color="{StaticResource TextOnAccentFillColorSelectedText}" type="SolidColorBrush">
+    
+    <div key="TextOnAccentFillColorPrimaryBrush" color="{StaticResource TextOnAccentFillColorPrimary}" type="SolidColorBrush">
+    <div key="TextOnAccentFillColorSecondaryBrush" color="{StaticResource TextOnAccentFillColorSecondary}" type="SolidColorBrush">
+    <div key="TextOnAccentFillColorDisabledBrush" color="{StaticResource TextOnAccentFillColorDisabled}" type="SolidColorBrush">
+    
+    <div key="ControlFillColorDefaultBrush" color="{StaticResource ControlFillColorDefault}" type="SolidColorBrush">
+    <div key="ControlFillColorSecondaryBrush" color="{StaticResource ControlFillColorSecondary}" type="SolidColorBrush">
+    <div key="ControlFillColorTertiaryBrush" color="{StaticResource ControlFillColorTertiary}" type="SolidColorBrush">
+    <div key="ControlFillColorDisabledBrush" color="{StaticResource ControlFillColorDisabled}" type="SolidColorBrush">
+    <div key="ControlFillColorTransparentBrush" color="{StaticResource ControlFillColorTransparent}" type="SolidColorBrush">
+    <div key="ControlFillColorInputActiveBrush" color="{StaticResource ControlFillColorInputActive}" type="SolidColorBrush">
+    
+    <div key="ControlStrongFillColorDefaultBrush" color="{StaticResource ControlStrongFillColorDefault}" type="SolidColorBrush">
+    <div key="ControlStrongFillColorDisabledBrush" color="{StaticResource ControlStrongFillColorDisabled}" type="SolidColorBrush">
+    
+    <div key="ControlSolidFillColorDefaultBrush" color="{StaticResource ControlSolidFillColorDefault}" type="SolidColorBrush">
+    
+    <div key="SubtleFillColorTransparentBrush" color="{StaticResource SubtleFillColorTransparent}" type="SolidColorBrush">
+    <div key="SubtleFillColorSecondaryBrush" color="{StaticResource SubtleFillColorSecondary}" type="SolidColorBrush">
+    <div key="SubtleFillColorTertiaryBrush" color="{StaticResource SubtleFillColorTertiary}" type="SolidColorBrush">
+    <div key="SubtleFillColorDisabledBrush" color="{StaticResource SubtleFillColorDisabled}" type="SolidColorBrush">
+    
+    <div key="ControlAltFillColorTransparentBrush" color="{StaticResource ControlAltFillColorTransparent}" type="SolidColorBrush">
+    <div key="ControlAltFillColorSecondaryBrush" color="{StaticResource ControlAltFillColorSecondary}" type="SolidColorBrush">
+    <div key="ControlAltFillColorTertiaryBrush" color="{StaticResource ControlAltFillColorTertiary}" type="SolidColorBrush">
+    <div key="ControlAltFillColorQuarternaryBrush" color="{StaticResource ControlAltFillColorQuarternary}" type="SolidColorBrush">
+    <div key="ControlAltFillColorDisabledBrush" color="{StaticResource ControlAltFillColorDisabled}" type="SolidColorBrush">
+    
+    <div key="ControlOnImageFillColorDefaultBrush" color="{StaticResource ControlOnImageFillColorDefault}" type="SolidColorBrush">
+    <div key="ControlOnImageFillColorSecondaryBrush" color="{StaticResource ControlOnImageFillColorSecondary}" type="SolidColorBrush">
+    <div key="ControlOnImageFillColorTertiaryBrush" color="{StaticResource ControlOnImageFillColorTertiary}" type="SolidColorBrush">
+    <div key="ControlOnImageFillColorDisabledBrush" color="{StaticResource ControlOnImageFillColorDisabled}" type="SolidColorBrush">
+    
+    <div key="AccentFillColorSelectedTextBackgroundBrush" color="{ThemeResource SystemAccentColor}" type="SolidColorBrush">
+    
+    <div key="AccentFillColorDefaultBrush" color="{ThemeResource SystemAccentColorDark1}" type="SolidColorBrush">
+    <div key="AccentFillColorSecondaryBrush" color="{ThemeResource SystemAccentColorDark1}" type="SolidColorBrush">
+    <div key="AccentFillColorTertiaryBrush" color="{ThemeResource SystemAccentColorDark1}" type="SolidColorBrush">
+    <div key="AccentFillColorDisabledBrush" color="{StaticResource AccentFillColorDisabled}" type="SolidColorBrush">
+    
+    <div key="ControlStrokeColorDefaultBrush" color="{StaticResource ControlStrokeColorDefault}" type="SolidColorBrush">
+    <div key="ControlStrokeColorSecondaryBrush" color="{StaticResource ControlStrokeColorSecondary}" type="SolidColorBrush">
+    <div key="ControlStrokeColorOnAccentDefaultBrush" color="{StaticResource ControlStrokeColorOnAccentDefault}" type="SolidColorBrush">
+    <div key="ControlStrokeColorOnAccentSecondaryBrush" color="{StaticResource ControlStrokeColorOnAccentSecondary}" type="SolidColorBrush">
+    <div key="ControlStrokeColorOnAccentTertiaryBrush" color="{StaticResource ControlStrokeColorOnAccentTertiary}" type="SolidColorBrush">
+    <div key="ControlStrokeColorOnAccentDisabledBrush" color="{StaticResource ControlStrokeColorOnAccentDisabled}" type="SolidColorBrush">
+    
+    <div key="ControlStrokeColorForStrongFillWhenOnImageBrush" color="{StaticResource ControlStrokeColorForStrongFillWhenOnImage}" type="SolidColorBrush">
+    
+    <div key="CardStrokeColorDefaultBrush" color="{StaticResource CardStrokeColorDefault}" type="SolidColorBrush">
+    <div key="CardStrokeColorDefaultSolidBrush" color="{StaticResource CardStrokeColorDefaultSolid}" type="SolidColorBrush">
+    
+    <div key="ControlStrongStrokeColorDefaultBrush" color="{StaticResource ControlStrongStrokeColorDefault}" type="SolidColorBrush">
+    <div key="ControlStrongStrokeColorDisabledBrush" color="{StaticResource ControlStrongStrokeColorDisabled}" type="SolidColorBrush">
+    
+    <div key="SurfaceStrokeColorDefaultBrush" color="{StaticResource SurfaceStrokeColorDefault}" type="SolidColorBrush">
+    <div key="SurfaceStrokeColorFlyoutBrush" color="{StaticResource SurfaceStrokeColorFlyout}" type="SolidColorBrush">
+    <div key="SurfaceStrokeColorInverseBrush" color="{StaticResource SurfaceStrokeColorInverse}" type="SolidColorBrush">
+    
+    <div key="DividerStrokeColorDefaultBrush" color="{StaticResource DividerStrokeColorDefault}" type="SolidColorBrush">
+    
+    <div key="FocusStrokeColorOuterBrush" color="{StaticResource FocusStrokeColorOuter}" type="SolidColorBrush">
+    <div key="FocusStrokeColorInnerBrush" color="{StaticResource FocusStrokeColorInner}" type="SolidColorBrush">
+    
+    <div key="CardBackgroundFillColorDefaultBrush" color="{StaticResource CardBackgroundFillColorDefault}" type="SolidColorBrush">
+    <div key="CardBackgroundFillColorSecondaryBrush" color="{StaticResource CardBackgroundFillColorSecondary}" type="SolidColorBrush">
+    
+    <div key="SmokeFillColorDefaultBrush" color="{StaticResource SmokeFillColorDefault}" type="SolidColorBrush">
+    
+    <div key="LayerFillColorDefaultBrush" color="{StaticResource LayerFillColorDefault}" type="SolidColorBrush">
+    <div key="LayerFillColorAltBrush" color="{StaticResource LayerFillColorAlt}" type="SolidColorBrush">
+    <div key="LayerOnAcrylicFillColorDefaultBrush" color="{StaticResource LayerOnAcrylicFillColorDefault}" type="SolidColorBrush">
+    <div key="LayerOnAccentAcrylicFillColorDefaultBrush" color="{StaticResource LayerOnAccentAcrylicFillColorDefault}" type="SolidColorBrush">
+    
+    <div key="LayerOnMicaBaseAltFillColorDefaultBrush" color="{StaticResource LayerOnMicaBaseAltFillColorDefault}" type="SolidColorBrush">
+    <div key="LayerOnMicaBaseAltFillColorSecondaryBrush" color="{StaticResource LayerOnMicaBaseAltFillColorSecondary}" type="SolidColorBrush">
+    <div key="LayerOnMicaBaseAltFillColorTertiaryBrush" color="{StaticResource LayerOnMicaBaseAltFillColorTertiary}" type="SolidColorBrush">
+    <div key="LayerOnMicaBaseAltFillColorTransparentBrush" color="{StaticResource LayerOnMicaBaseAltFillColorTransparent}" type="SolidColorBrush">
+    
+    <div key="SolidBackgroundFillColorBaseBrush" color="{StaticResource SolidBackgroundFillColorBase}" type="SolidColorBrush">
+    <div key="SolidBackgroundFillColorSecondaryBrush" color="{StaticResource SolidBackgroundFillColorSecondary}" type="SolidColorBrush">
+    <div key="SolidBackgroundFillColorTertiaryBrush" color="{StaticResource SolidBackgroundFillColorTertiary}" type="SolidColorBrush">
+    <div key="SolidBackgroundFillColorQuarternaryBrush" color="{StaticResource SolidBackgroundFillColorQuarternary}" type="SolidColorBrush">
+    <div key="SolidBackgroundFillColorBaseAltBrush" color="{StaticResource SolidBackgroundFillColorBaseAlt}" type="SolidColorBrush">
+    
+    <div key="SystemFillColorAttentionBrush" color="{ThemeResource SystemAccentColor}" type="SolidColorBrush">
+    <div key="SystemFillColorSuccessBrush" color="{StaticResource SystemFillColorSuccess}" type="SolidColorBrush">
+    <div key="SystemFillColorCautionBrush" color="{StaticResource SystemFillColorCaution}" type="SolidColorBrush">
+    <div key="SystemFillColorCriticalBrush" color="{StaticResource SystemFillColorCritical}" type="SolidColorBrush">
+    <div key="SystemFillColorNeutralBrush" color="{StaticResource SystemFillColorNeutral}" type="SolidColorBrush">
+    <div key="SystemFillColorSolidNeutralBrush" color="{StaticResource SystemFillColorSolidNeutral}" type="SolidColorBrush">
+    <div key="SystemFillColorAttentionBackgroundBrush" color="{StaticResource SystemFillColorAttentionBackground}" type="SolidColorBrush">
+    <div key="SystemFillColorSuccessBackgroundBrush" color="{StaticResource SystemFillColorSuccessBackground}" type="SolidColorBrush">
+    <div key="SystemFillColorCautionBackgroundBrush" color="{StaticResource SystemFillColorCautionBackground}" type="SolidColorBrush">
+    <div key="SystemFillColorCriticalBackgroundBrush" color="{StaticResource SystemFillColorCriticalBackground}" type="SolidColorBrush">
+    <div key="SystemFillColorNeutralBackgroundBrush" color="{StaticResource SystemFillColorNeutralBackground}" type="SolidColorBrush">
+    <div key="SystemFillColorSolidAttentionBackgroundBrush" color="{StaticResource SystemFillColorSolidAttentionBackground}" type="SolidColorBrush">
+    <div key="SystemFillColorSolidNeutralBackgroundBrush" color="{StaticResource SystemFillColorSolidNeutralBackground}" type="SolidColorBrush">
+    
+    <!-- Elevation border brushes-->
+    
+    <div key="ControlElevationBorderBrush" mappingmode="Absolute" startpoint="0,0" endpoint="0,3" type="LinearGradientBrush">
+    <div type="LinearGradientBrush.RelativeTransform">
+    <div scaley="-1" centery="0.5" type="ScaleTransform">
+    </div></div>
+    <div type="LinearGradientBrush.GradientStops">
+    <div offset="0.33" color="{StaticResource ControlStrokeColorSecondary}" type="GradientStop">
+    <div offset="1.0" color="{StaticResource ControlStrokeColorDefault}" type="GradientStop">
+    </div></div></div>
+    </div>
+    
+    <div key="CircleElevationBorderBrush" mappingmode="RelativeToBoundingBox" startpoint="0,0" endpoint="0,1" type="LinearGradientBrush">
+    <div type="LinearGradientBrush.GradientStops">
+    <div offset="0.50" color="{StaticResource ControlStrokeColorDefault}" type="GradientStop">
+    <div offset="0.70" color="{StaticResource ControlStrokeColorSecondary}" type="GradientStop">
+    </div></div></div>
+    </div>
+    
+    <div key="AccentControlElevationBorderBrush" mappingmode="Absolute" startpoint="0,0" endpoint="0,3" type="LinearGradientBrush">
+    <div type="LinearGradientBrush.RelativeTransform">
+    <div scaley="-1" centery="0.5" type="ScaleTransform">
+    </div></div>
+    <div type="LinearGradientBrush.GradientStops">
+    <div offset="0.33" color="{StaticResource ControlStrokeColorOnAccentSecondary}" type="GradientStop">
+    <div offset="1.0" color="{StaticResource ControlStrokeColorOnAccentDefault}" type="GradientStop">
+    </div></div></div>
+    </div>
+    
+    <!-- Duplication from HighContrast colors to match keys, set to magenta to show these should not be used -->
+    <div key="SystemColorWindowTextColorBrush" color="#FF00FF" type="SolidColorBrush">
+    <div key="SystemColorWindowColorBrush" color="#FF00FF" type="SolidColorBrush">
+    <div key="SystemColorButtonFaceColorBrush" color="#FF00FF" type="SolidColorBrush">
+    <div key="SystemColorButtonTextColorBrush" color="#FF00FF" type="SolidColorBrush">
+    <div key="SystemColorHighlightColorBrush" color="#FF00FF" type="SolidColorBrush">
+    <div key="SystemColorHighlightTextColorBrush" color="#FF00FF" type="SolidColorBrush">
+    <div key="SystemColorHotlightColorBrush" color="#FF00FF" type="SolidColorBrush">
+    <div key="SystemColorGrayTextColorBrush" color="#FF00FF" type="SolidColorBrush">
+    </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
+    
+    <div key="HighContrast" type="ResourceDictionary">
+    <div key="TextFillColorPrimaryBrush" color="{ThemeResource SystemColorWindowTextColor}" type="SolidColorBrush">
+    <div key="TextFillColorSecondaryBrush" color="{ThemeResource SystemColorWindowTextColor}" type="SolidColorBrush">
+    <div key="TextFillColorTertiaryBrush" color="{ThemeResource SystemColorWindowTextColor}" type="SolidColorBrush">
+    <div key="TextFillColorDisabledBrush" color="{ThemeResource SystemColorGrayTextColor}" type="SolidColorBrush">
+    <div key="TextFillColorInverseBrush" color="{ThemeResource SystemColorWindowTextColor}" type="SolidColorBrush">
+    
+    <div key="AccentTextFillColorPrimaryBrush" color="{ThemeResource SystemColorWindowTextColor}" type="SolidColorBrush">
+    <div key="AccentTextFillColorSecondaryBrush" color="{ThemeResource SystemColorWindowTextColor}" type="SolidColorBrush">
+    <div key="AccentTextFillColorTertiaryBrush" color="{ThemeResource SystemColorWindowTextColor}" type="SolidColorBrush">
+    <div key="AccentTextFillColorDisabledBrush" color="{ThemeResource SystemColorGrayTextColor}" type="SolidColorBrush">
+    
+    <div key="TextOnAccentFillColorSelectedTextBrush" color="{ThemeResource SystemColorWindowTextColor}" type="SolidColorBrush">
+    
+    <div key="TextOnAccentFillColorPrimaryBrush" color="{ThemeResource SystemColorWindowTextColor}" type="SolidColorBrush">
+    <div key="TextOnAccentFillColorSecondaryBrush" color="{ThemeResource SystemColorWindowTextColor}" type="SolidColorBrush">
+    <div key="TextOnAccentFillColorDisabledBrush" color="{ThemeResource SystemColorGrayTextColor}" type="SolidColorBrush">
+    
+    <div key="ControlFillColorDefaultBrush" color="{ThemeResource SystemColorButtonFaceColor}" type="SolidColorBrush">
+    <div key="ControlFillColorSecondaryBrush" color="{ThemeResource SystemColorButtonFaceColor}" type="SolidColorBrush">
+    <div key="ControlFillColorTertiaryBrush" color="{ThemeResource SystemColorButtonFaceColor}" type="SolidColorBrush">
+    <div key="ControlFillColorDisabledBrush" color="{ThemeResource SystemColorButtonFaceColor}" type="SolidColorBrush">
+    <div key="ControlFillColorTransparentBrush" color="Transparent" type="SolidColorBrush">
+    <div key="ControlFillColorInputActiveBrush" color="{ThemeResource SystemColorButtonFaceColor}" type="SolidColorBrush">
+    
+    <div key="ControlStrongFillColorDefaultBrush" color="{ThemeResource SystemColorButtonFaceColor}" type="SolidColorBrush">
+    <div key="ControlStrongFillColorDisabledBrush" color="{ThemeResource SystemColorButtonFaceColor}" type="SolidColorBrush">
+    
+    <div key="ControlSolidFillColorDefaultBrush" color="{ThemeResource SystemColorButtonFaceColor}" type="SolidColorBrush">
+    
+    <div key="SubtleFillColorTransparentBrush" color="Transparent" type="SolidColorBrush">
+    <div key="SubtleFillColorSecondaryBrush" color="{ThemeResource SystemColorButtonFaceColor}" type="SolidColorBrush">
+    <div key="SubtleFillColorTertiaryBrush" color="{ThemeResource SystemColorButtonFaceColor}" type="SolidColorBrush">
+    <div key="SubtleFillColorDisabledBrush" color="{ThemeResource SystemColorButtonFaceColor}" type="SolidColorBrush">
+    
+    <div key="ControlAltFillColorTransparentBrush" color="Transparent" type="SolidColorBrush">
+    <div key="ControlAltFillColorSecondaryBrush" color="{ThemeResource SystemColorButtonFaceColor}" type="SolidColorBrush">
+    <div key="ControlAltFillColorTertiaryBrush" color="{ThemeResource SystemColorButtonFaceColor}" type="SolidColorBrush">
+    <div key="ControlAltFillColorQuarternaryBrush" color="{ThemeResource SystemColorButtonFaceColor}" type="SolidColorBrush">
+    <div key="ControlAltFillColorDisabledBrush" color="{ThemeResource SystemColorButtonFaceColor}" type="SolidColorBrush">
+    
+    <div key="ControlOnImageFillColorDefaultBrush" color="{ThemeResource SystemColorButtonFaceColor}" type="SolidColorBrush">
+    <div key="ControlOnImageFillColorSecondaryBrush" color="{ThemeResource SystemColorButtonFaceColor}" type="SolidColorBrush">
+    <div key="ControlOnImageFillColorTertiaryBrush" color="{ThemeResource SystemColorButtonFaceColor}" type="SolidColorBrush">
+    <div key="ControlOnImageFillColorDisabledBrush" color="{ThemeResource SystemColorButtonFaceColor}" type="SolidColorBrush">
+    
+    <div key="AccentFillColorSelectedTextBackgroundBrush" color="{ThemeResource SystemColorWindowColor}" type="SolidColorBrush">
+    
+    <div key="AccentFillColorDefaultBrush" color="{ThemeResource SystemColorWindowColor}" type="SolidColorBrush">
+    <div key="AccentFillColorSecondaryBrush" color="{ThemeResource SystemColorWindowColor}" type="SolidColorBrush">
+    <div key="AccentFillColorTertiaryBrush" color="{ThemeResource SystemColorWindowColor}" type="SolidColorBrush">
+    <div key="AccentFillColorDisabledBrush" color="{ThemeResource SystemColorWindowColor}" type="SolidColorBrush">
+    
+    <div key="ControlStrokeColorDefaultBrush" color="{ThemeResource SystemColorButtonTextColor}" type="SolidColorBrush">
+    <div key="ControlStrokeColorSecondaryBrush" color="{ThemeResource SystemColorButtonTextColor}" type="SolidColorBrush">
+    <div key="ControlStrokeColorOnAccentDefaultBrush" color="{ThemeResource SystemColorButtonTextColor}" type="SolidColorBrush">
+    <div key="ControlStrokeColorOnAccentSecondaryBrush" color="{ThemeResource SystemColorButtonTextColor}" type="SolidColorBrush">
+    <div key="ControlStrokeColorOnAccentTertiaryBrush" color="{ThemeResource SystemColorButtonTextColor}" type="SolidColorBrush">
+    <div key="ControlStrokeColorOnAccentDisabledBrush" color="{ThemeResource SystemColorGrayTextColor}" type="SolidColorBrush">
+    
+    <div key="ControlStrokeColorForStrongFillWhenOnImageBrush" color="{ThemeResource SystemColorButtonTextColor}" type="SolidColorBrush">
+    
+    <div key="CardStrokeColorDefaultBrush" color="{ThemeResource SystemColorWindowTextColor}" type="SolidColorBrush">
+    <div key="CardStrokeColorDefaultSolidBrush" color="{ThemeResource SystemColorWindowTextColor}" type="SolidColorBrush">
+    
+    <div key="ControlStrongStrokeColorDefaultBrush" color="{ThemeResource SystemColorButtonTextColor}" type="SolidColorBrush">
+    <div key="ControlStrongStrokeColorDisabledBrush" color="{ThemeResource SystemColorButtonTextColor}" type="SolidColorBrush">
+    
+    <div key="SurfaceStrokeColorDefaultBrush" color="{ThemeResource SystemColorWindowTextColor}" type="SolidColorBrush">
+    <div key="SurfaceStrokeColorFlyoutBrush" color="{ThemeResource SystemColorWindowTextColor}" type="SolidColorBrush">
+    <div key="SurfaceStrokeColorInverseBrush" color="{ThemeResource SystemColorWindowTextColor}" type="SolidColorBrush">
+    
+    <div key="DividerStrokeColorDefaultBrush" color="{ThemeResource SystemColorWindowTextColor}" type="SolidColorBrush">
+    
+    <div key="FocusStrokeColorOuterBrush" color="{ThemeResource SystemColorWindowTextColor}" type="SolidColorBrush">
+    <div key="FocusStrokeColorInnerBrush" color="{ThemeResource SystemColorWindowColor}" type="SolidColorBrush">
+    
+    <div key="CardBackgroundFillColorDefaultBrush" color="{ThemeResource SystemColorWindowColor}" type="SolidColorBrush">
+    <div key="CardBackgroundFillColorSecondaryBrush" color="{ThemeResource SystemColorWindowColor}" type="SolidColorBrush">
+    
+    <div key="SmokeFillColorDefaultBrush" color="{ThemeResource SystemColorWindowColor}" type="SolidColorBrush">
+    
+    <div key="LayerFillColorDefaultBrush" color="{ThemeResource SystemColorWindowColor}" type="SolidColorBrush">
+    <div key="LayerFillColorAltBrush" color="{ThemeResource SystemColorWindowColor}" type="SolidColorBrush">
+    <div key="LayerOnAcrylicFillColorDefaultBrush" color="{ThemeResource SystemColorWindowColor}" type="SolidColorBrush">
+    <div key="LayerOnAccentAcrylicFillColorDefaultBrush" color="{ThemeResource SystemColorWindowColor}" type="SolidColorBrush">
+    
+    <div key="LayerOnMicaBaseAltFillColorDefaultBrush" color="{ThemeResource SystemColorWindowColor}" type="SolidColorBrush">
+    <div key="LayerOnMicaBaseAltFillColorSecondaryBrush" color="{ThemeResource SystemColorWindowColor}" type="SolidColorBrush">
+    <div key="LayerOnMicaBaseAltFillColorTertiaryBrush" color="{ThemeResource SystemColorWindowColor}" type="SolidColorBrush">
+    <div key="LayerOnMicaBaseAltFillColorTransparentBrush" color="{ThemeResource SystemColorWindowColor}" type="SolidColorBrush">
+    
+    <div key="SolidBackgroundFillColorBaseBrush" color="{ThemeResource SystemColorWindowColor}" type="SolidColorBrush">
+    <div key="SolidBackgroundFillColorSecondaryBrush" color="{ThemeResource SystemColorWindowColor}" type="SolidColorBrush">
+    <div key="SolidBackgroundFillColorTertiaryBrush" color="{ThemeResource SystemColorWindowColor}" type="SolidColorBrush">
+    <div key="SolidBackgroundFillColorQuarternaryBrush" color="{ThemeResource SystemColorWindowColor}" type="SolidColorBrush">
+    <div key="SolidBackgroundFillColorBaseAltBrush" color="{ThemeResource SystemColorWindowColor}" type="SolidColorBrush">
+    
+    <div key="SystemFillColorAttentionBrush" color="{ThemeResource SystemColorWindowTextColor}" type="SolidColorBrush">
+    <div key="SystemFillColorSuccessBrush" color="{ThemeResource SystemColorWindowTextColor}" type="SolidColorBrush">
+    <div key="SystemFillColorCautionBrush" color="{ThemeResource SystemColorWindowTextColor}" type="SolidColorBrush">
+    <div key="SystemFillColorCriticalBrush" color="{ThemeResource SystemColorWindowTextColor}" type="SolidColorBrush">
+    <div key="SystemFillColorNeutralBrush" color="{ThemeResource SystemColorWindowTextColor}" type="SolidColorBrush">
+    <div key="SystemFillColorSolidNeutralBrush" color="{ThemeResource SystemColorWindowTextColor}" type="SolidColorBrush">
+    <div key="SystemFillColorAttentionBackgroundBrush" color="{ThemeResource SystemColorWindowColor}" type="SolidColorBrush">
+    <div key="SystemFillColorSuccessBackgroundBrush" color="{ThemeResource SystemColorWindowColor}" type="SolidColorBrush">
+    <div key="SystemFillColorCautionBackgroundBrush" color="{ThemeResource SystemColorWindowColor}" type="SolidColorBrush">
+    <div key="SystemFillColorCriticalBackgroundBrush" color="{ThemeResource SystemColorWindowColor}" type="SolidColorBrush">
+    <div key="SystemFillColorNeutralBackgroundBrush" color="{ThemeResource SystemColorWindowColor}" type="SolidColorBrush">
+    <div key="SystemFillColorSolidAttentionBackgroundBrush" color="{ThemeResource SystemColorWindowColor}" type="SolidColorBrush">
+    <div key="SystemFillColorSolidNeutralBackgroundBrush" color="{ThemeResource SystemColorWindowColor}" type="SolidColorBrush">
+    
+    <!-- Elevation border brushes-->
+    <div key="ControlElevationBorderBrush" color="{ThemeResource SystemColorWindowTextColor}" type="SolidColorBrush">
+    <div key="CircleElevationBorderBrush" color="{ThemeResource SystemColorWindowTextColor}" type="SolidColorBrush">
+    <div key="AccentControlElevationBorderBrush" color="{ThemeResource SystemColorWindowTextColor}" type="SolidColorBrush">
+    
+    <div key="SystemColorWindowTextColorBrush" color="{ThemeResource SystemColorWindowTextColor}" type="SolidColorBrush">
+    <div key="SystemColorWindowColorBrush" color="{ThemeResource SystemColorWindowColor}" type="SolidColorBrush">
+    <div key="SystemColorButtonFaceColorBrush" color="{ThemeResource SystemColorButtonFaceColor}" type="SolidColorBrush">
+    <div key="SystemColorButtonTextColorBrush" color="{ThemeResource SystemColorButtonTextColor}" type="SolidColorBrush">
+    <div key="SystemColorHighlightColorBrush" color="{ThemeResource SystemColorHighlightColor}" type="SolidColorBrush">
+    <div key="SystemColorHighlightTextColorBrush" color="{ThemeResource SystemColorHighlightTextColor}" type="SolidColorBrush">
+    <div key="SystemColorHotlightColorBrush" color="{ThemeResource SystemColorHotlightColor}" type="SolidColorBrush">
+    <div key="SystemColorGrayTextColorBrush" color="{ThemeResource SystemColorGrayTextColor}" type="SolidColorBrush">
+    
+    <!-- Colors copied from Default theme to match list of keys. Should not
+    be using these keys. These are set to Red to notify that.-->
+    <div key="TextFillColorPrimary" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="TextFillColorSecondary" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="TextFillColorTertiary" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="TextFillColorDisabled" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="TextFillColorInverse" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="AccentTextFillColorDisabled" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="ControlFillColorDefault" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="ControlFillColorSecondary" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="ControlFillColorTertiary" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="ControlFillColorDisabled" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="ControlFillColorTransparent" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="ControlFillColorInputActive" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="ControlSolidFillColorDefault" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="SubtleFillColorTransparent" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="SubtleFillColorSecondary" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="SubtleFillColorTertiary" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="SubtleFillColorDisabled" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="ControlAltFillColorTransparent" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="ControlAltFillColorSecondary" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="ControlAltFillColorTertiary" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="ControlAltFillColorQuarternary" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="ControlAltFillColorDisabled" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="ControlOnImageFillColorDefault" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="ControlOnImageFillColorSecondary" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="ControlOnImageFillColorTertiary" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="ControlOnImageFillColorDisabled" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="ControlStrokeColorDefault" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="ControlStrokeColorSecondary" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="ControlStrokeColorOnAccentDefault" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="ControlStrokeColorOnAccentSecondary" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="ControlStrokeColorOnAccentTertiary" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="ControlStrokeColorOnAccentDisabled" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="CardStrokeColorDefault" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="CardStrokeColorDefaultSolid" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="SurfaceStrokeColorDefault" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="SurfaceStrokeColorFlyout" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="SurfaceStrokeColorInverse" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="DividerStrokeColorDefault" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="FocusStrokeColorOuter" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="FocusStrokeColorInner" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="CardBackgroundFillColorDefault" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="CardBackgroundFillColorSecondary" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="SmokeFillColorDefault" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="LayerFillColorDefault" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="LayerFillColorAlt" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="LayerOnAcrylicFillColorDefault" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="LayerOnAccentAcrylicFillColorDefault" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="LayerOnMicaBaseAltFillColorDefault" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="LayerOnMicaBaseAltFillColorSecondary" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="LayerOnMicaBaseAltFillColorTertiary" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="LayerOnMicaBaseAltFillColorTransparent" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="SolidBackgroundFillColorBase" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="SolidBackgroundFillColorSecondary" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="SolidBackgroundFillColorTertiary" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="SolidBackgroundFillColorQuarternary" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="SolidBackgroundFillColorTransparent" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="SolidBackgroundFillColorBaseAlt" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="SystemFillColorSuccess" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="SystemFillColorCaution" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="SystemFillColorCritical" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="SystemFillColorNeutral" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="SystemFillColorSolidNeutral" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="SystemFillColorAttentionBackground" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="SystemFillColorSuccessBackground" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="SystemFillColorCautionBackground" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="SystemFillColorCriticalBackground" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="SystemFillColorNeutralBackground" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="SystemFillColorSolidAttentionBackground" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="SystemFillColorSolidNeutralBackground" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="TextOnAccentFillColorSelectedText" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="TextOnAccentFillColorPrimary" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="TextOnAccentFillColorSecondary" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="TextOnAccentFillColorDisabled" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="ControlStrongFillColorDefault" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="ControlStrongFillColorDisabled" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="AccentFillColorDisabled" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="ControlStrokeColorForStrongFillWhenOnImage" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="ControlStrongStrokeColorDefault" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    <div key="ControlStrongStrokeColorDisabled" type="Color" style="background-color: rgb(255, 0, 0);">#FF0000</div>
+    </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
+    
+    </div>
+    
+    <div type="x:String" key="ControlFastOutSlowInKeySpline">0,0,0,1</div>
+    
+    <div type="x:String" key="ControlNormalAnimationDuration">00:00:00.250</div>
+    <div type="x:String" key="ControlFastAnimationDuration">00:00:00.167</div>
+    <div type="x:String" key="ControlFastAnimationAfterDuration">00:00:00.168</div>
+    <div type="x:String" key="ControlFasterAnimationDuration">00:00:00.083</div>
+    
+    </div>
+    <button onclick="xenon.xcompile.controls.processAll()">convert</button>
+    <button onclick="end()">End Conversion</button>
+    <script src="bin/xhml.js"></script>
+    <script>
+    function con() {
+    xenon.xcompile.controls.processAll();
+    }
+    //ends conversion by setting all innerHTML to text for a quick and easy copy and paste job
+    function end() {
+    document.getElementsByTagName("html")[0].innerText = document.getElementsByTagName("html")[0].innerHTML;
+    }
+    </script></body>

@@ -2380,18 +2380,222 @@ define('xenon/controls/TextBlock',[
     ]);
     return TextBlock;
 });
+//attributes needed by the dictionary converter.
+//all contained within one file.
+define('xenon/protoDictionary/attributes',[], function() {
+    var attributes = [
+        ["x:Key","x:key","key"],
+        ["Color","color","color"],
+        ["MappingMode","mappingmode","mappingmode"],
+        ["StartPoint","startpoint","startpoint"],
+        ["EndPoint","endpoint","endpoint"],
+        ["ScaleY","scaley","ScaleY"],
+        ["CenterY","centery","CenterY"],
+        ["ScaleX","scalex","ScaleX"],
+        ["CenterX","centerx","CenterX"],
+        ["Offset","offset","Offset"]
+    ]
+    return attributes;
+});
+define('xenon/protoDictionary/SolidColorBrush',[
+    "xenon/controls/processor",
+    "xenon/protoDictionary/attributes",
+], function(controlProcessor, attributes) {
+    var SolidColorBrush = {
+        process: function(control) {
+            var SolidColorBrush = document.createElement("div");
+            var attrs = control.attributes;
+            SolidColorBrush.innerHTML = control.innerHTML;
+            controlProcessor.processAttributes(SolidColorBrush, attrs, attributes);
+            SolidColorBrush.setAttribute("Type", "SolidColorBrush");
+            control.replaceWith(SolidColorBrush);
+        }
+    }
+    controlProcessor.registerControl([
+        "SOLIDCOLORBRUSH","solidcolorbrush","SolidColorBrush",
+        SolidColorBrush.process,
+    ]);
+    return SolidColorBrush;
+});
+define('xenon/protoDictionary/Color',[
+    "xenon/controls/processor",
+    "xenon/protoDictionary/attributes"
+], function(controlProcessor, attributes) {
+    var Color = {
+        process: function(control) {
+            //want to have some fun with the styles here..
+            var Color = document.createElement("div");
+            var attrs = control.attributes;
+            Color.innerHTML = control.innerHTML;
+            controlProcessor.processAttributes(Color, attrs, attributes);
+            var style = "background-color: " + Color.innerHTML + ";";
+            Color.setAttribute("Type","Color");
+            Color.style = style;
+            control.replaceWith(Color);
+        }
+    }
+    controlProcessor.registerControl([
+        "COLOR","color","Color",
+        Color.process,
+    ]);
+    return Color;
+});
+//a prototype XAML resource disctionary interpreter, designed for use with 
+//WinJuvinated and other WinJS UI #UpdateNeeded applications.
+define('xenon/protoDictionary/dictionary',[
+    "xenon/protoDictionary/attributes",
+    "xenon/controls/processor",
+], function(attributes, controlProcessor) {
+    //register all "controls"
+    var Dictionary  = {
+        //process a <ResourceDictionary/> resource
+        process: function(control) {
+            var attrs = control.attributes;
+            var ResourceDictionary = document.createElement("div");
+            controlProcessor.processAttributes(ResourceDictionary, attrs, attributes);
+            ResourceDictionary.innerHTML = control.innerHTML;
+            ResourceDictionary.setAttribute("Type", "ResourceDictionary");
+            control.replaceWith(ResourceDictionary);
+        },
+        //psuedo content for resourcedictionary
+        processThemeDict: function(control) {
+            var ThemeDictionary = document.createElement("div");
+            ThemeDictionary.innerHTML = control.innerHTML;
+            ThemeDictionary.setAttribute("Type", "ResourceDictionary.ThemeDictionaries")
+            control.replaceWith(ThemeDictionary);
+        },
+    }
+    controlProcessor.registerControl([
+        "RESOURCEDICTIONARY.THEMEDICTIONARIES","resourcedictionary.themedictionaries","ResourceDictionary.ThemeDictionaries",
+        Dictionary.processThemeDict,
+    ]);
+    controlProcessor.registerControl([
+        "RESOURCEDICTIONARY","resourcedictionary","ResourceDictionary",
+        Dictionary.process,
+    ]);
+    return Dictionary;
+});
+define('xenon/protoDictionary/LinearGradientBrush',[
+    "xenon/controls/processor",
+    "xenon/protoDictionary/attributes",
+], function(controlProcessor, attributes) {
+    var LinearGradientBrush = {
+        processLGB: function(control) {
+            var attrs = control.attributes;
+            var LinearGradientBrush = document.createElement("div");
+            controlProcessor.processAttributes(LinearGradientBrush, attrs, attributes);
+            LinearGradientBrush.innerHTML = control.innerHTML;
+            LinearGradientBrush.setAttribute("type","LinearGradientBrush");
+            control.replaceWith(LinearGradientBrush);
+        },
+        processLGBRT: function(control) {
+            var attrs = control.attributes;
+            //re-used code
+            var LinearGradientBrush = document.createElement("div");
+            controlProcessor.processAttributes(LinearGradientBrush, attrs, attributes);
+            LinearGradientBrush.innerHTML = control.innerHTML;
+            LinearGradientBrush.setAttribute("type","LinearGradientBrush.RelativeTransform");
+            control.replaceWith(LinearGradientBrush);
+        },
+        processST: function(control) {
+            var attrs = control.attributes;
+            //re-used code
+            var LinearGradientBrush = document.createElement("div");
+            controlProcessor.processAttributes(LinearGradientBrush, attrs, attributes);
+            LinearGradientBrush.innerHTML = control.innerHTML;
+            LinearGradientBrush.setAttribute("type","ScaleTransform");
+            control.replaceWith(LinearGradientBrush);
+        },
+        processLGBGS: function(control) {
+            var attrs = control.attributes;
+            //re-used code
+            var LinearGradientBrush = document.createElement("div");
+            controlProcessor.processAttributes(LinearGradientBrush, attrs, attributes);
+            LinearGradientBrush.innerHTML = control.innerHTML;
+            LinearGradientBrush.setAttribute("type","LinearGradientBrush.GradientStops");
+            control.replaceWith(LinearGradientBrush);
+        },
+        processGS: function(control) {
+            var attrs = control.attributes;
+            //re-used code
+            var LinearGradientBrush = document.createElement("div");
+            controlProcessor.processAttributes(LinearGradientBrush, attrs, attributes);
+            LinearGradientBrush.innerHTML = control.innerHTML;
+            LinearGradientBrush.setAttribute("type","GradientStop");
+            control.replaceWith(LinearGradientBrush);
+        }
+    }
+    controlProcessor.registerControl([
+        "LINEARGRADIENTBRUSH","lineargradientbrush","LinearGradientBrush",
+        LinearGradientBrush.processLGB,
+    ]);
+    controlProcessor.registerControl([
+        "LINEARGRADIENTBRUSH.RELATIVETRANSFORM","lineargradientbrush.relativetransform","LinearGradientBrush.RelativeTransform",
+        LinearGradientBrush.processLGBRT,
+    ]);
+    controlProcessor.registerControl([
+        "SCALETRANSFORM","scaletransform","ScaleTransform",
+        LinearGradientBrush.processST,
+    ]);
+    controlProcessor.registerControl([
+        "LINEARGRADIENTBRUSH.GRADIENTSTOPS","lineargradientbrush.gradientstops","LinearGradientBrush.GradientStops",
+        LinearGradientBrush.processLGBGS,
+    ]);
+    controlProcessor.registerControl([
+        "GRADIENTSTOP","gradientstop","GradientStop",
+        LinearGradientBrush.processGS,
+    ]);
+    return LinearGradientBrush;
+});
+define('xenon/protoDictionary/String',[
+    "xenon/controls/processor",
+    "xenon/protoDictionary/attributes",
+], function(controlProcessor, attributes) {
+    var String = {
+        process: function(control) {
+            var String = document.createElement("div");
+            var attrs = control.attributes;
+            String.innerHTML = control.innerHTML;
+            String.setAttribute("type","x:String");
+            controlProcessor.processAttributes(String, attrs, attributes);
+            control.replaceWith(String);
+        }
+    }
+    controlProcessor.registerControl([
+        "X:STRING","x:string", "x:String",
+        String.process,
+    ]);
+    return String;
+});
+define('xenon/protoDictionary/proto.js',[
+    "xenon/controls/processor",
+    "xenon/protoDictionary/SolidColorBrush",
+    "xenon/protoDictionary/Color",
+    "xenon/protoDictionary/dictionary",
+    "xenon/protoDictionary/LinearGradientBrush",
+    "xenon/protoDictionary/String",
+], function(
+    controlProcessor,
+    SolidColorBrush,
+    Color,
+    dictionary,
+    LinearGradientBrush,
+    String,
+) {});
 define('xenon/controls',[
     "xenon/controls/StackPanel",
     "xenon/controls/TextBox",
     "xenon/controls/test",
     "xenon/controls/processor",
     "xenon/controls/TextBlock",
+    "xenon/protoDictionary/proto.js",
 ], function(
     StackPanel,
     TextBox,
     Test,
     controlProcessor,
     TextBlock,
+    Dictionary,
 ) {
     //control holder
     //code
