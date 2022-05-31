@@ -740,15 +740,3 @@
     <x:String x:Key="ControlFasterAnimationDuration">00:00:00.083</x:String>
 
 </ResourceDictionary>
-<button onclick="xenon.xcompile.controls.processAll()">convert</button>
-<button onclick="end()">End Conversion</button>
-<script src="bin/xhml.js"></script>
-<script>
-    function con() {
-        xenon.xcompile.controls.processAll();
-    }
-    //ends conversion by setting all innerHTML to text for a quick and easy copy and paste job
-    function end() {
-        document.getElementsByTagName("html")[0].innerText = document.getElementsByTagName("html")[0].innerHTML;
-    }
-</script>
